@@ -164,6 +164,53 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Structured Data for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "Калкулатор Лева Евро - EuroBG Elka",
+            "alternateName": [
+              "Калкулатор Лев Евро",
+              "Лева Евро Калкулатор", 
+              "BGN EUR Калкулатор",
+              "Официален Калкулатор Лев Евро",
+              "Калкулатор за Пазаруване в Евро",
+              "Калкулатор Ресто Евро"
+            ],
+            "description": "Калкулатор лева евро с официален курс лев евро 1.95583. Лева в евро, левове в евро, БГН евро. Калкулатор за пазаруване в евро, ресто в евро, плащане в евро, двойно обозначаване на цени.",
+            "url": "https://eurobg-elka.vercel.app",
+            "applicationCategory": "FinanceApplication",
+            "operatingSystem": "Any",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "EUR"
+            },
+            "featureList": [
+              "Калкулатор лева евро",
+              "Официален курс лев евро 1.95583",
+              "Лева в евро конверсия",
+              "Левове в евро",
+              "BGN EUR калкулатор",
+              "Калкулатор за пазаруване в евро",
+              "Калкулатор ресто в евро",
+              "Плащане в евро калкулатор",
+              "Цени в евро",
+              "Двойно обозначаване на цени",
+              "Смятане лев евро",
+              "Преизчисляване лев евро",
+              "Добавяне на артикули по тегло",
+              "Работи офлайн"
+            ],
+            "inLanguage": ["bg", "en"],
+            "availableLanguage": ["bg", "en"]
+          })
+        }}
+      />
+
       <HeaderBar
         rate={state.rate.bgnPerEur}
         onRateChange={handleRateChange}
@@ -250,4 +297,3 @@ export default function HomePage() {
     </div>
   );
 }
-

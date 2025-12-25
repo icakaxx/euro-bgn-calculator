@@ -1,0 +1,7 @@
+# Allow all search engines
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://eurobg-elka.vercel.app/sitemap.xml
+
